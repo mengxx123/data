@@ -1,0 +1,77 @@
+<template>
+    <my-page title="数据" :page="page">
+        开发中
+    </my-page>
+</template>
+
+<script>
+    export default {
+        data () {
+            return {
+                articles: [],
+                page: {
+                    menu: [
+                        {
+                            type: 'icon',
+                            icon: 'apps',
+                            href: 'https://app.yunser.com?utm_source=data.yunser.com',
+                            target: '_blank',
+                            title: '应用'
+                        }
+                        // {
+                        //     type: 'icon',
+                        //     icon: 'help',
+                        //     to: '/help'
+                        // }
+                    ]
+                }
+            }
+        },
+        mounted() {
+            // this.$http.get('/u/news/articles').then(
+            //     response => {
+            //         let data = response.data
+            //         this.articles = data
+            //     },
+            //     response => {
+            //         console.log(response)
+            //     })
+        },
+        methods: {
+            click() {
+                window.open('http://www.nicetool.net/', '_blank')
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+.slogan {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+.news-list {
+    .item {
+        margin-bottom: 8px;
+    }
+    .title {
+        color: #333;
+    }
+}
+.re-box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #999;
+    cursor: pointer;
+    .tip {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #eee;
+        padding: 2px 4px;
+        font-size: 12px;
+    }
+}
+</style>
