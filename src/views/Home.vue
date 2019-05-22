@@ -1,6 +1,8 @@
 <template>
     <my-page title="数据" :page="page">
-        开发中
+        <div class="common-container container">
+            开发中
+        </div>
     </my-page>
 </template>
 
@@ -14,7 +16,7 @@
                         {
                             type: 'icon',
                             icon: 'apps',
-                            href: 'https://app.yunser.com?utm_source=data.yunser.com',
+                            href: 'https://app.yunser.com?utm_source=data',
                             target: '_blank',
                             title: '应用'
                         }
